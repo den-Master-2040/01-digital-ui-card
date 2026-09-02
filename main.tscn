@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://0w01e5u1mauv"]
+
+[ext_resource type="Texture2D" uid="uid://dgxn8sdbddrnb" path="res://icon.svg" id="1_ig7tw"]
+
+[sub_resource type="SystemFont" id="SystemFont_naijb"]
+
+[sub_resource type="Theme" id="Theme_y7nac"]
+default_font = SubResource("SystemFont_naijb")
+
+[node name="Main" type="Control" unique_id=1272521099]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_y7nac")
+
+[node name="Background" type="ColorRect" parent="." unique_id=255373960]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19076231, 0.19076234, 0.19076231, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1052843394]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=2122335442]
+layout_mode = 2
+
+[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=1446437526]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+texture = ExtResource("1_ig7tw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1571526361]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Кеша"
+horizontal_alignment = 1
+
+[node name="JobLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=592133244]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Программист"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1379694645]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="DevButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1440130822]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "DEV"
+
+[node name="DesignButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=95046258]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "DESIGN"
